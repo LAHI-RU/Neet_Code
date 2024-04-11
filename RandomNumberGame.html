@@ -11,10 +11,25 @@
 		<p> ***Number between 1-10*** </p>
 		<p> <input type="text" id="guess"> </p>
 		<p> <button id="guessCheck"> Guess! </button></p>
-		<script type="text/javascript">
-
-			alert(Math.floor(Math.random() * 11));
 		
+		<script type="text/javascript">
+		
+			document.getElementById("guessCheck").onclick = function() {
+				
+				var randomNum = Math.floor(Math.random() * 11);
+				
+				if (document.getElementById("guess").value == randomNum) {
+					
+					alert("Well done!!");
+					
+				}
+				
+				else {
+					alert("Nope!!! Try again. I am Thinking number " + randomNum)
+				}
+			}
+			
+
 		
 		
 		</script>
