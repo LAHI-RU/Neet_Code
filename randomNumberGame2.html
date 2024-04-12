@@ -1,0 +1,59 @@
+<html>
+	<head>
+	
+		<title> RandomNumberGame </title>
+	
+	</head>
+	
+	<body>
+		
+		<p> Which number is in your mind?  </p>
+		<p> <input type="text" id="myNumber"> </p>
+		<p> <button id="guess"> Guess!! </button></p>
+		
+		<script type="text/javascript">
+		
+			document.getElementById("guess").onclick = function() {
+				
+				var myNum = document.getElementById("myNumber").value;
+				
+				var numOfGuess = 1;
+				
+				var gotIt = false;
+				
+				while(gotIt == false)
+				{
+					var guess = Math.random();
+					guess = guess*10;
+					guess = Math.flow(guess);
+					
+					if (guess == myNum) {
+						
+						gotIt = true;
+						alert("Got It, Your Number is" + guess + " ,It took me " + numOfGuess + "guesses.")
+					}
+					
+					else {
+						
+						numOfGuess++;
+					}
+				}
+				
+				if (document.getElementById("guess").value == randomNum) {
+					
+					alert("Well done!!");
+					
+				}
+				
+				else {
+					alert("Nope!!! Try again. I am Thinking number " + randomNum)
+				}
+			}
+			
+		</script>
+		
+	
+	</body>
+
+
+</html>
